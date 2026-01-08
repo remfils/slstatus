@@ -6,6 +6,7 @@ include config.mk
 
 REQ = util
 COM =\
+	components/AnimatedIcon\
 	components/battery\
 	components/cat\
 	components/cpu\

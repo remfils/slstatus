@@ -40,7 +40,7 @@ ip(const char *interface, unsigned short sa_family)
 				warn("getnameinfo: %s", gai_strerror(s));
 				return NULL;
 			}
-			return bprintf("%s", host);
+			return bprintf(" %s", host);
 		}
 	}
 

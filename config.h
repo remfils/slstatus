@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 1000;
+const unsigned int interval = 300;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -56,6 +56,7 @@ static const char unknown_str[] = "n/a";
  *                                                     thermal zone on FreeBSD
  *                                                     (tz0, tz1, etc.)
  * uid                 UID of current user             NULL
+ * up                  interface is running            interface name (eth0)
  * uptime              system uptime                   NULL
  * username            username of current user        NULL
  * vol_perc            OSS/ALSA volume in percent      mixer file (/dev/mixer)
@@ -65,9 +66,11 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-        { ipv4, " %s |  ", "ens32"},
-        { ram_used, "RAM: %s | ", NULL},
-        { disk_used, "DU: %s ", "/"},
-        { keymap, " // %s ", NULL},
-        { datetime, "// %s ", "%F %T" },
+        //{ AnimatedIcon, "%s", NULL },
+        { ipv4, " %s ", "ens32"},
+        { cpu_perc, "💻 %s ", NULL},
+        { ram_used, "🐏 %s ", NULL},
+        { disk_used, "📂 %s ", "/"},
+        { datetime, "%s " },
+        { keymap, "%s ", NULL},
 };

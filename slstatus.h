@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+const char *AnimatedIcon(const char *unused);
+
 /* battery */
 const char *battery_perc(const char *);
 const char *battery_remaining(const char *);
@@ -13,7 +15,7 @@ const char *cpu_freq(const char *unused);
 const char *cpu_perc(const char *unused);
 
 /* datetime */
-const char *datetime(const char *fmt);
+const char *datetime();
 
 /* disk */
 const char *disk_free(const char *path);

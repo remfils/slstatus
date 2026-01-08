@@ -82,5 +82,11 @@ end:
 	if (XCloseDisplay(dpy))
 		warn("XCloseDisplay: Failed to close display");
 
+        if (strstr(layout, "us") != NULL) {
+          layout = "󾓦";
+        } else if (strstr(layout, "ru") != NULL) {
+          layout = "󾓬";
+        }
+
 	return layout;
 }
